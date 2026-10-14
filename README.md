@@ -1,7 +1,7 @@
 # Restaurante · Web
 
 Frontend de un sistema de gestión de restaurante: carta de menús, platos, recetas, ingredientes y encargados por categoría.
-Consume la API REST de [restaurante-v1-api](https://github.com/Jmurga16/restaurante-v1-api) (.NET Minimal API + SQL Server).
+Consume la API REST de [restaurante-v1-api](https://github.com/josemurgadev/restaurante-v1-api) (.NET Minimal API + SQL Server).
 
 ![Carta de menús con los platos de cada menú](docs/carta-de-menus.webp)
 
@@ -18,7 +18,7 @@ Consume la API REST de [restaurante-v1-api](https://github.com/Jmurga16/restaura
 - **Angular 19** (componentes standalone, rutas con *lazy loading*, control flow `@for` / `@if`)
 - **TypeScript** · **RxJS** · `HttpClient`
 - **Tailwind CSS 4**
-- Backend: [restaurante-v1-api](https://github.com/Jmurga16/restaurante-v1-api) en **.NET** con **SQL Server**
+- Backend: [restaurante-v1-api](https://github.com/josemurgadev/restaurante-v1-api) en **.NET** con **SQL Server**
 
 ## Estructura
 
@@ -37,7 +37,7 @@ src/app/
 Requiere Node.js 18 o superior y la API corriendo.
 
 ```bash
-git clone https://github.com/Jmurga16/restaurante-v1-web.git
+git clone https://github.com/josemurgadev/restaurante-v1-web.git
 cd restaurante-v1-web
 npm install
 npm start
