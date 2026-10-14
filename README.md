@@ -1,59 +1,48 @@
-# RestaurantApp
+# Restaurante · Web
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+Frontend de un sistema de gestión de restaurante: carta de menús, platos, recetas, ingredientes y encargados por categoría.
+Consume la API REST de [restaurante-v1-api](https://github.com/Jmurga16/restaurante-v1-api) (.NET Minimal API + SQL Server).
 
-## Development server
+## Qué hace
 
-To start a local development server, run:
+- **Carta de menús**: lista los menús y despliega los platos de cada uno.
+- **Platos**: catálogo con búsqueda y filtro por categoría.
+- **Recetas e ingredientes**: cada plato tiene su receta con los ingredientes que usa; los ingredientes se gestionan con cantidad disponible y unidad de medida, en una tabla paginada con formulario modal.
+- **Encargados**: responsables asignados a cada categoría.
+- **Tema claro y oscuro**.
 
-```bash
-ng serve
+## Stack
+
+- **Angular 19** (componentes standalone, rutas con *lazy loading*, control flow `@for` / `@if`)
+- **TypeScript** · **RxJS** · `HttpClient`
+- **Tailwind CSS 4**
+- Backend: [restaurante-v1-api](https://github.com/Jmurga16/restaurante-v1-api) en **.NET** con **SQL Server**
+
+## Estructura
+
+```
+src/app/
+├── global/    # Páginas generales (inicio, 404) y piezas compartidas
+├── layout/    # Layout principal y cabecera
+└── menu/
+    ├── pages/     # carta, plato, receta, ingredientes, encargado
+    ├── services/  # Servicios HTTP por entidad (CRUD contra la API)
+    └── models/    # Interfaces de dominio
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Ejecutar en local
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Requiere Node.js 18 o superior y la API corriendo.
 
 ```bash
-ng generate component component-name
+git clone https://github.com/Jmurga16/restaurante-v1-web.git
+cd restaurante-v1-web
+npm install
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+La app abre en `http://localhost:4200`. La URL de la API se configura en `src/environments/environment.ts` (`apiUrl`, por defecto `https://localhost:44369`).
 
-```bash
-ng generate --help
-```
+## Créditos
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desarrollado por **José Murga** ([josemurga.dev](https://josemurga.dev)), con aportes de Erik Antony en recetas e ingredientes.
