@@ -3,6 +3,8 @@
 Frontend de un sistema de gestión de restaurante: carta de menús, platos, recetas, ingredientes y encargados por categoría.
 Consume la API REST de [restaurante-v1-api](https://github.com/Jmurga16/restaurante-v1-api) (.NET Minimal API + SQL Server).
 
+![Carta de menús con los platos de cada menú](docs/carta-de-menus.webp)
+
 ## Qué hace
 
 - **Carta de menús**: lista los menús y despliega los platos de cada uno.
